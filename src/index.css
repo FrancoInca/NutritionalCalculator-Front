@@ -1,0 +1,162 @@
+/* Based on Eduardo Fierro's Reset */
+/* Custom properties */
+:root {
+  --primary-color: #242424;
+  --secondary-color: #f0f0f0;
+
+  /* Fonts */
+  --primary-font: Helvetica, Arial, sans-serif;
+  --secondary-font: Verdana;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #f0f0f0;
+    --secondary-color: #242424;
+  }
+}
+
+/* High Contrast */
+@media (prefer-contrast: high) {
+  :root {
+    --primary-color: white;
+    --secondary-color: black;
+  }
+}
+
+/* Disable animations if user had configure "no-animation" mode */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+    animation: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+}
+
+/* Reset margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Images */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* Reseting links */
+a {
+  display: block;
+}
+
+/* Reseting list */
+li {
+  list-style-type: none;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Text Style */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* Selected text */
+::-moz-selection {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+::selection {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/* Formating fonts and forms */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* optional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Formating tables */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Solving SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Apply typography to the entire page */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  line-height: 1.4em;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
